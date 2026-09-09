@@ -15,6 +15,7 @@ dependencies {
 
     implementation(libs.androidx.activity.compose)
     implementation(libs.compose.material3)
+    implementation(libs.androidx.lifecycle.viewmodelCompose)
 
     implementation(libs.compose.uiToolingPreview)
     debugImplementation(libs.compose.uiTooling)
