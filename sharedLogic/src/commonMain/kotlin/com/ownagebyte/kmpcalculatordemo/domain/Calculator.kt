@@ -2,7 +2,7 @@ package com.ownagebyte.kmpcalculatordemo.domain
 
 import com.ownagebyte.kmpcalculatordemo.model.MathOperation
 
-object CalculatorEngine {
+object Calculator {
     sealed interface CalculationResult {
         data class Success(val result: String) : CalculationResult
         data class Failure(val errorMessage: String) : CalculationResult

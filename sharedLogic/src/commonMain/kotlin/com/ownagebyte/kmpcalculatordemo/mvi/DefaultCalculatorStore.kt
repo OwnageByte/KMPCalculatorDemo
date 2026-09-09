@@ -1,6 +1,6 @@
 package com.ownagebyte.kmpcalculatordemo.mvi
 
-import com.ownagebyte.kmpcalculatordemo.domain.CalculatorEngine
+import com.ownagebyte.kmpcalculatordemo.domain.Calculator
 import com.ownagebyte.kmpcalculatordemo.domain.CalculatorValidator
 import com.ownagebyte.kmpcalculatordemo.model.CalculatorUiState
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -69,14 +69,14 @@ class DefaultCalculatorStore(
                     result = null
                 )
             } else {
-                val result = CalculatorEngine.calculate(
+                val result = Calculator.calculate(
                     firstNumber = validation.parsedFirstNumber!!,
                     secondNumber = validation.parsedSecondNumber!!,
                     operation = state.selectedOperation!!
                 )
 
                 when (result) {
-                    is CalculatorEngine.CalculationResult.Success -> {
+                    is Calculator.CalculationResult.Success -> {
                         state.copy(
                             firstNumberError = null,
                             secondNumberError = null,
@@ -85,7 +85,7 @@ class DefaultCalculatorStore(
                         )
                     }
 
-                    is CalculatorEngine.CalculationResult.Failure -> {
+                    is Calculator.CalculationResult.Failure -> {
                         state.copy(
                             firstNumberError = null,
                             secondNumberError = null,
