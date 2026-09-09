@@ -117,4 +117,5 @@ Execute tests via Gradle in your terminal:
 
 | Successful Calculation | Validation Errors (Multiple Fields) |
 | :---: | :---: |
-| ![Android Calculation Success](screenshots/android_success.png) | ![Android Validation Errors](screenshots/android_errors.png) |
+| <img width="367" height="776" alt="Screenshot_20260910_022638" src="https://github.com/user-attachments/assets/73d3d89f-5306-40e4-9361-b6c4c6e31a27"/> | <img width="367" height="776" alt="Screenshot_20260910_014716" src="https://github.com/user-attachments/assets/ee09a787-f358-4681-990a-058ba321d69c" /> |
+
