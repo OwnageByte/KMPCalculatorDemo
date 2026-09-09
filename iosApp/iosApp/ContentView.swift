@@ -58,10 +58,10 @@ struct ContentView: View {
                         )
                     ) {
                         Text("Select operation").tag(nil as MathOperation?)
-                        Text("Add").tag(MathOperation.add as MathOperation?)
-                        Text("Subtract").tag(MathOperation.subtract as MathOperation?)
-                        Text("Multiply").tag(MathOperation.multiply as MathOperation?)
-                        Text("Divide").tag(MathOperation.divide as MathOperation?)
+                        Text("Add (+)").tag(MathOperation.add as MathOperation?)
+                        Text("Subtract (-)").tag(MathOperation.subtract as MathOperation?)
+                        Text("Multiply (x)").tag(MathOperation.multiply as MathOperation?)
+                        Text("Divide (÷)").tag(MathOperation.divide as MathOperation?)
                     }
                     .pickerStyle(.menu)
 

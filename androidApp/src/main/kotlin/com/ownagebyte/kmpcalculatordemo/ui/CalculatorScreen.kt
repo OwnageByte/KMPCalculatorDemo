@@ -106,7 +106,7 @@ private fun CalculatorScreenContent(
                 modifier = Modifier
                     .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable)
                     .fillMaxWidth(),
-                value = state.selectedOperation?.toString().orEmpty(),
+                value = state.selectedOperation?.display.orEmpty(),
                 onValueChange = {},
                 readOnly = true,
                 label = { Text("Operation") },
@@ -131,7 +131,7 @@ private fun CalculatorScreenContent(
             ) {
                 MathOperation.entries.forEach { operation ->
                     DropdownMenuItem(
-                        text = { Text(operation.toString()) },
+                        text = { Text(operation.display) },
                         onClick = {
                             onIntent(CalculatorIntent.OperationSelected(operation))
                             isDropdownExpanded = false
